@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POISE — Executive Applications</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #080304;
+      color: #f1f5f9;
+    }
+
+    .font-syne {
+      font-family: 'Syne', sans-serif;
+    }
+
+    /* TOP HEADER IMAGE BACKGROUND */
+    .hero-bg {
+      /* Replace the URL below with your actual image URL */
+      background-image: linear-gradient(to bottom, rgba(8, 3, 4, 0.65), rgba(8, 3, 4, 1)), url('YOUR_IMAGE_URL_HERE.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Dark Red Minimal Glass Card */
+    .red-card {
+      background: rgba(18, 7, 10, 0.85);
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .red-card:hover {
+      border-color: rgba(239, 68, 68, 0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start">
+
+  <!-- TOP HEADER WITH BACKGROUND IMAGE -->
+  <header class="w-full hero-bg pt-16 pb-12 px-4 sm:px-8 text-center border-b border-red-900/30">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/80 border border-red-500/40 text-xs font-semibold text-red-400 mb-4 uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+        Executive Applications Open
+      </div>
+
+      <h1 class="font-syne text-6xl sm:text-7xl font-black tracking-wider text-white uppercase mb-2">
+        POISE
+      </h1>
+      
+      <p class="text-red-400 text-sm sm:text-base font-semibold tracking-wide">
+        The Runway Edition — 2-Day Modeling Workshop
+      </p>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full max-w-2xl px-4 sm:px-0 my-8">
+
+    <!-- PROJECT VISION SECTION -->
+    <section class="red-card rounded-2xl p-6 sm:p-7 mb-8">
+      
+      <div class="flex items-center justify-between border-b border-red-900/40 pb-3 mb-4">
+        <span class="text-xs uppercase tracking-widest text-red-500 font-extrabold">01 // Project Vision</span>
+        <span class="text-[10px] text-red-300 uppercase tracking-widest bg-red-950 px-2.5 py-0.5 rounded border border-red-800/40 font-semibold">
+          Executive Overview
+        </span>
+      </div>
+
+      <p class="text-sm sm:text-base text-gray-200 font-normal leading-relaxed mb-5">
+        <strong class="text-white font-bold">POISE</strong> is a signature 2-day modeling workshop designed to empower emerging talent with runway presence and personal branding. Executive Committee members drive <span class="text-red-400 font-semibold">Revenue Generation</span>, <span class="text-red-400 font-semibold">Business Development</span>, and <span class="text-red-400 font-semibold">Public Relations</span> while gaining hands-on event leadership experience.
+      </p>
+
+      <!-- 3 Quick Pillars -->
+      <div class="grid grid-cols-3 gap-2.5 pt-2 border-t border-red-900/30">
+        <div class="bg-black/40 p-3 rounded-lg border border-red-900/20 text-center">
+          <span class="block text-[10px] font-bold text-red-500 uppercase">Format</span>
+          <span class="text-xs font-semibold text-gray-200">2-Day Workshop</span>
+        </div>
+        <div class="bg-black/40 p-3 rounded-lg border border-red-900/20 text-center">
+          <span class="block text-[10px] font-bold text-red-500 uppercase">Focus</span>
+          <span class="text-xs font-semibold text-gray-200">Revenue & BD</span>
+        </div>
+        <div class="bg-black/40 p-3 rounded-lg border border-red-900/20 text-center">
+          <span class="block text-[10px] font-bold text-red-500 uppercase">Leadership</span>
+          <span class="text-xs font-semibold text-gray-200">PR & Ops</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ROLES LIST -->
+    <section>
+      <div class="flex items-center justify-between mb-4 px-1">
+        <h2 class="text-xs uppercase tracking-widest text-red-400 font-extrabold">02 // Available Functions</h2>
+        <span class="text-xs text-red-400 font-bold bg-red-950 px-2.5 py-0.5 rounded border border-red-800/40">
+          7 Openings
+        </span>
+      </div>
+
+      <div class="space-y-2.5" id="roles-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ROLE DETAIL MODAL -->
+  <div id="role-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-[#0f0507] text-gray-100 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-red-900/50 max-h-[85vh] flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modal-container">
+      
+      <div class="p-5 border-b border-red-900/40 flex items-start justify-between bg-red-950/30">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-red-500 block mb-0.5">Executive Role</span>
+          <h3 class="text-xl font-bold text-white" id="modal-title">Role Title</h3>
+          <p class="text-xs text-gray-400 mt-0.5" id="modal-openings">Openings</p>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-white p-1 text-base font-bold">✕</button>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-4 text-xs sm:text-sm leading-relaxed">
+        <div>
+          <h4 class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">Key Responsibilities</h4>
+          <ul class="list-disc pl-4 space-y-1 text-gray-300" id="modal-jd"></ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">Required Skills</h4>
+          <div class="flex flex-wrap gap-1.5" id="modal-skills"></div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">Key Performance Indicators</h4>
+          <div class="flex flex-wrap gap-1.5" id="modal-kpis"></div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">Learning Outcomes</h4>
+          <div class="space-y-1" id="modal-outcomes"></div>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-red-900/40 bg-black/50">
+        <a href="https://forms.google.com" target="_blank" class="block w-full py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-center text-xs tracking-wider uppercase rounded-xl transition shadow-lg">
+          Submit Application
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const rolesData = [
+      {
+        id: "ocp",
+        title: "Organizing Committee President",
+        tag: "OCP",
+        openings: "1 Opening",
+        jd: [
+          "Lead the entire Organizing Committee towards delivering a successful, profitable, and impactful 2-day modeling workshop (POISE).",
+          "Manage the OC team across all functions (Fin, Log, PD, PR, Del, MKT) and ensure effective communication.",
+          "Ensure the project meets revenue and brand objectives agreed upon with the EB.",
+          "Set event timelines, action plans, ticket sales targets, and ensure team accountability."
+        ],
+        skills: ["Strategic Leadership", "Task Management", "Conflict Resolution", "Event Management"],
+        kpis: ["# of delegates registered", "# of PD / Sponsors raised", "Event GPM (Revenue)"],
+        outcomes: ["High-stakes project management", "Team leadership under pressure", "Budget & revenue oversight"]
+      },
+      {
+        id: "fin",
+        title: "Finance Lead",
+        tag: "FIN",
+        openings: "1 Opening",
+        jd: [
+          "Draft and maintain the comprehensive event budget and expenditure caps.",
+          "Oversee ticket pricing strategies, participant payment validation, and reimbursement claims.",
+          "Coordinate with the PD team to ensure cash sponsorship collections are received on time."
+        ],
+        skills: ["Financial Forecasting", "Excel / Data Tracking", "Audit Accuracy"],
+        kpis: ["100% financial accuracy", "Zero budget deficit"],
+        outcomes: ["Corporate cash flow auditing", "Financial strategy execution"]
+      },
+      {
+        id: "log",
+        title: "Logistics Team",
+        tag: "LOG",
+        openings: "3 Openings",
+        jd: [
+          "Secure and manage workshop space, runway stage configurations, lighting, sound systems, and backdrops.",
+          "Organize backstage areas, dressing rooms, full-length mirrors, and trainer hospitality.",
+          "Oversee on-the-day technical flow, stage cues, music integration, and runway practice timing."
+        ],
+        skills: ["On-Ground Operations", "Vendor Negotiation", "Stage Coordination"],
+        kpis: ["100% venue setup readiness", "Zero technical delay on event days"],
+        outcomes: ["Event execution management", "Supply chain coordination"]
+      },
+      {
+        id: "pd",
+        title: "Partnership Development",
+        tag: "PD",
+        openings: "3 Openings",
+        jd: [
+          "Identify and pitch potential sponsors (clothing brands, makeup/grooming partners, modeling agencies).",
+          "Draft tailored partnership proposals and negotiate contract terms.",
+          "Coordinate with MKT to ensure sponsor logo placements and media deliverables are fulfilled."
+        ],
+        skills: ["B2B Sales", "Corporate Negotiation", "Cold Pitching"],
+        kpis: ["Value of raised cash sponsorships", "# of partners secured"],
+        outcomes: ["Corporate deal closing", "Sponsorship proposal crafting"]
+      },
+      {
+        id: "pr",
+        title: "Public Relations",
+        tag: "PR",
+        openings: "2 Openings",
+        jd: [
+          "Reach out to and onboard professional workshop trainers, runway models, and fashion choreographers.",
+          "Coordinate media coverage, campus publication features, and influencer engagement.",
+          "Draft official invitation letters and handle VIP guest hospitality on event days."
+        ],
+        skills: ["Media Relations", "VIP Hospitality", "Public Speaking"],
+        kpis: ["# of trainers/models onboarded", "Media impression count"],
+        outcomes: ["Public relations strategy", "High-profile networking"]
+      },
+      {
+        id: "del",
+        title: "Delegate Servicing",
+        tag: "DEL",
+        openings: "3 Openings",
+        jd: [
+          "Design and manage registration forms, delegate communication channels, and inquiry handling.",
+          "Provide delegates with key pre-event information, dress codes, and schedules.",
+          "Operate on-site check-in desks, manage attendance, and distribute delegate passes."
+        ],
+        skills: ["Customer Relationship Management", "Communication", "Data Handling"],
+        kpis: ["# of paid delegates onboarded", "Delegate Satisfaction Score (>90%)"],
+        outcomes: ["Delegate experience design", "Mass customer management"]
+      },
+      {
+        id: "mkt",
+        title: "Marketing Team",
+        tag: "MKT",
+        openings: "3 Openings",
+        jd: [
+          "Design all promotional visual assets (flyers, banners, social media posts, badges).",
+          "Produce promotional video teasers, event trailers, and trainer spotlight videos.",
+          "Execute targeted digital marketing campaigns to sell out workshop registrations."
+        ],
+        skills: ["Graphic Design", "Video Editing", "Copywriting"],
+        kpis: ["Total social media reach", "# of promotional videos published"],
+        outcomes: ["Digital campaign management", "Content production skills"]
+      }
+    ];
+
+    // Render Roles Grid
+    const grid = document.getElementById("roles-grid");
+    rolesData.forEach(role => {
+      const card = document.createElement("div");
+      card.className = "red-card p-3.5 rounded-xl cursor-pointer flex justify-between items-center group";
+      card.onclick = () => openModal(role.id);
+      card.innerHTML = `
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-bold text-red-400 bg-red-950 border border-red-800/40 px-2 py-0.5 rounded">
+            ${role.tag}
+          </span>
+          <div>
+            <h3 class="font-semibold text-white text-sm group-hover:text-red-400 transition-colors">${role.title}</h3>
+            <p class="text-[11px] text-gray-400">${role.openings}</p>
+          </div>
+        </div>
+        <span class="text-red-500/40 group-hover:text-red-400 text-sm font-bold transition-transform group-hover:translate-x-1">→</span>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Modal Controls
+    function openModal(roleId) {
+      const role = rolesData.find(r => r.id === roleId);
+      if (!role) return;
+
+      document.getElementById("modal-title").innerText = role.title;
+      document.getElementById("modal-openings").innerText = role.openings;
+
+      document.getElementById("modal-jd").innerHTML = role.jd.map(item => `<li>${item}</li>`).join('');
+      document.getElementById("modal-skills").innerHTML = role.skills.map(s => `<span class="bg-red-950 text-red-300 border border-red-800/40 text-[11px] px-2 py-0.5 rounded">${s}</span>`).join('');
+      document.getElementById("modal-kpis").innerHTML = role.kpis.map(k => `<span class="bg-black/60 text-gray-300 border border-red-900/30 text-[11px] px-2 py-0.5 rounded">${k}</span>`).join('');
+      document.getElementById("modal-outcomes").innerHTML = role.outcomes.map(o => `<div class="bg-black/40 text-gray-300 text-xs p-2 rounded border border-red-900/20">${o}</div>`).join('');
+
+      const modal = document.getElementById("role-modal");
+      const container = document.getElementById("modal-container");
+      modal.classList.remove("hidden");
+      setTimeout(() => {
+        container.classList.remove("scale-95", "opacity-0");
+        container.classList.add("scale-100", "opacity-100");
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("role-modal");
+      const container = document.getElementById("modal-container");
+      container.classList.remove("scale-100", "opacity-100");
+      container.classList.add("scale-95", "opacity-0");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+      }, 150);
+    }
+  </script>
+</body>
+</html>
