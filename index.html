@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POISE — Executive Recruitment</title>
+  <title>POISE — Organizing Committee Application</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
@@ -77,7 +77,7 @@
     <div class="max-w-3xl mx-auto">
       
       <span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-widest text-orange-300 border border-white/20 mb-6">
-        Executive Applications
+        Organizing Committee Application
       </span>
 
       <h1 class="font-serif-fashion text-6xl sm:text-8xl font-extrabold tracking-tight uppercase mb-4">
@@ -133,7 +133,7 @@
       </div>
 
       <p class="text-base text-gray-700 font-normal leading-relaxed mb-6">
-        <strong class="text-black font-semibold">POISE</strong> is a signature 2-day modeling workshop designed to empower emerging talent with runway presence and personal branding. Executive Committee members drive <span class="text-orange-600 font-medium">Revenue Generation</span>, <span class="text-orange-600 font-medium">Business Development</span>, and <span class="text-orange-600 font-medium">Public Relations</span> while gaining hands-on event leadership experience.
+        <strong class="text-black font-semibold">POISE</strong> is a signature 2-day modeling workshop designed to empower emerging talent with runway presence and personal branding. Organizing Committee members drive <span class="text-orange-600 font-medium">Revenue Generation</span>, <span class="text-orange-600 font-medium">Business Development</span>, and <span class="text-orange-600 font-medium">Public Relations</span> while gaining hands-on event leadership experience.
       </p>
 
       <!-- Pillars -->
@@ -176,7 +176,7 @@
       
       <div class="p-6 border-b border-gray-100 flex items-start justify-between bg-gray-50">
         <div>
-          <span class="text-[10px] font-bold uppercase tracking-wider text-orange-600 block mb-1" id="modal-tag">Executive Role</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-orange-600 block mb-1" id="modal-tag">Organizing Committee Role</span>
           <h3 class="text-xl font-bold text-gray-900" id="modal-title">Role Title</h3>
           <p class="text-xs text-gray-500 mt-0.5" id="modal-openings">Openings</p>
         </div>
@@ -206,8 +206,8 @@
       </div>
 
       <div class="p-5 border-t border-gray-100 bg-gray-50">
-        <a id="modal-apply-btn" href="#" target="_blank" class="block w-full py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center text-xs tracking-wider uppercase rounded-xl transition shadow-md">
-          Submit Application
+        <a id="modal-apply-btn" href="#" target="_blank" class="block w-full py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center text-xs tracking-widest uppercase rounded-xl transition shadow-md">
+          Apply
         </a>
       </div>
 
@@ -221,15 +221,15 @@
       <!-- LOGO ROW -->
       <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
         <!-- Main AIESEC Logo -->
-        <img src="aiesec-logo.png" alt="AIESEC Logo" class="h-8 sm:h-10 object-contain" />
+        <img src="AIESEC_logo.png" alt="AIESEC Logo" class="h-8 sm:h-10 object-contain" />
         
         <!-- Local Chapter Logo -->
-        <img src="aiesec-cinec-logo.png" alt="AIESEC in CINEC Logo" class="h-8 sm:h-10 object-contain" />
+        <img src="AIESEC_cinec.png" alt="AIESEC in CINEC Logo" class="h-8 sm:h-10 object-contain" />
       </div>
 
       <!-- ORGANIZATION DESCRIPTION -->
       <p class="text-xs sm:text-sm text-stone-400 font-normal leading-relaxed max-w-3xl mx-auto">
-        <strong class="text-stone-200">AIESEC in CINEC</strong> is an Official Expansion of AIESEC Sri Lanka, a non-governmental not-for-profit organization. AIESEC is a global youth-led organization striving to achieve peace and fulfillment of humankind's potential by activating leadership qualities in youth through learning from practical experiences in challenging environments. Together with partner organizations, AIESEC facilitates a network of cross-cultural exchanges in the form of volunteering experiences and professional internships.
+        <strong class="text-stone-200">AIESEC in CINEC</strong> is an Initiative Group of AIESEC Sri Lanka, a non-governmental not-for-profit organization. AIESEC is a global youth-led organization striving to achieve peace and fulfillment of humankind's potential by activating leadership qualities in youth through learning from practical experiences in challenging environments. Together with partner organizations, AIESEC facilitates a network of cross-cultural exchanges in the form of volunteering experiences and professional internships.
       </p>
 
       <!-- HORIZONTAL DIVIDER -->
@@ -253,13 +253,13 @@
         type: "ocp",
         openings: "1 Opening",
         jd: [
-          "Lead the entire Organizing Committee towards delivering a successful, profitable, and impactful 2-day modeling workshop (POISE).",
+          "Lead the entire OC towards delivering a successful Modeling Workshop aligned with AIESEC in CINEC objectives.",
           "Manage the OC team across all functions (Fin, Log, PD, PR, Del, MKT) and ensure effective communication.",
-          "Ensure the project meets revenue and brand objectives agreed upon with the EB.",
+          "Ensure the project meets revenue and brand objectives agreed upon with the MB.",
           "Set event timelines, action plans, ticket sales targets, and ensure team accountability."
         ],
         skills: ["Strategic Leadership", "Task Management", "Conflict Resolution", "Event Management"],
-        kpis: ["# of delegates registered", "# of PD / Sponsors raised", "Event GPM (Revenue)"],
+        kpis: ["# of delegates registered", "# of PD / Sponsors raised", "Event GPM (Revenue)", "OC Member Retention & Satisfaction Rate"],
         outcomes: ["High-stakes project management", "Team leadership under pressure", "Budget & revenue oversight"]
       },
       {
@@ -382,7 +382,7 @@
 
       document.getElementById("modal-title").innerText = role.title;
       document.getElementById("modal-openings").innerText = role.openings;
-      document.getElementById("modal-tag").innerText = role.type === 'ocp' ? "Organizing Committee President Role" : "Organizing Committee Vice President Role";
+      document.getElementById("modal-tag").innerText = role.type === 'ocp' ? "Organizing Committee President Role" : "Organizing Committee Member Role";
 
       // Set application link dynamically based on role type
       const applyBtn = document.getElementById("modal-apply-btn");
