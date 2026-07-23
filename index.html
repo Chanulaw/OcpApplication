@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POISE — Organizing Committee Application</title>
+  <title>NOVERA — Organizing Committee Application</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
+    :root {
+      --primary-red: #ee0202;
+      --dark-charcoal: #222d2c;
+      --light-bg: #f2f2f2;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #F6F5F2;
-      color: #1A1A1A;
+      background-color: var(--light-bg);
+      color: var(--dark-charcoal);
       position: relative;
       overflow-x: hidden;
     }
@@ -25,7 +31,7 @@
       left: -10%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+      background: radial-gradient(circle, rgba(238, 2, 2, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
@@ -37,7 +43,7 @@
       right: -10%;
       width: 550px;
       height: 550px;
-      background: radial-gradient(circle, rgba(234, 88, 12, 0.07) 0%, rgba(255, 255, 255, 0) 70%);
+      background: radial-gradient(circle, rgba(34, 45, 44, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
@@ -48,7 +54,7 @@
     }
 
     .hero-banner {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75)), url('model.png');
+      background-image: linear-gradient(to bottom, rgba(34, 45, 44, 0.5), rgba(34, 45, 44, 0.85)), url('model.png');
       background-size: cover;
       background-position: center;
     }
@@ -60,9 +66,25 @@
     }
 
     .editorial-card:hover {
-      border-color: #EA580C;
+      border-color: #ee0202;
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px -10px rgba(234, 88, 12, 0.12);
+      box-shadow: 0 12px 30px -10px rgba(238, 2, 2, 0.12);
+    }
+
+    .accent-color {
+      color: #ee0202;
+    }
+
+    .accent-bg {
+      background-color: #ee0202;
+    }
+
+    .accent-bg:hover {
+      background-color: #cc0202;
+    }
+
+    .accent-border {
+      border-color: #ee0202;
     }
   </style>
 </head>
@@ -76,12 +98,12 @@
   <header class="w-full hero-banner pt-24 pb-20 px-6 text-center text-white relative border-b border-black/10 z-10">
     <div class="max-w-3xl mx-auto">
       
-      <span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-widest text-orange-300 border border-white/20 mb-6">
+      <span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-widest text-red-300 border border-white/20 mb-6">
         Organizing Committee Application
       </span>
 
       <h1 class="font-serif-fashion text-6xl sm:text-8xl font-extrabold tracking-tight uppercase mb-4">
-        POISE
+        NOVERA
       </h1>
       
       <p class="text-gray-200 text-sm sm:text-lg font-light tracking-wide max-w-xl mx-auto">
@@ -96,28 +118,28 @@
 
     <!-- LEGACY OF LEADERSHIP SECTION -->
     <section class="bg-white rounded-2xl p-7 sm:p-9 border border-gray-200/80 shadow-sm">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
-        The Legacy of <br class="hidden sm:inline" /><span class="text-orange-600 font-serif-fashion italic font-normal">Leadership.</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#222d2c] tracking-tight leading-tight mb-6">
+        The Legacy of <br class="hidden sm:inline" /><span class="text-[#ee0202] font-serif-fashion italic font-normal">Leadership.</span>
       </h2>
 
-      <p class="text-sm sm:text-base text-gray-500 font-normal leading-relaxed mb-4">
-        POISE is a flagship initiative organized by AIESEC in CINEC, bringing together youth, fashion professionals, and personal branding experts into one vibrant and transformative learning environment. This experience celebrates confidence, professional poise, and self-expression across diverse domains.
+      <p class="text-sm sm:text-base text-gray-600 font-normal leading-relaxed mb-4">
+        NOVERA is a flagship initiative organized by AIESEC in CINEC, bringing together youth, fashion professionals, and personal branding experts into one vibrant and transformative learning environment. This experience celebrates confidence, professional poise, and self-expression across diverse domains.
       </p>
 
-      <p class="text-sm sm:text-base text-gray-500 font-normal leading-relaxed mb-8">
-        More than just a workshop, POISE provides a launchpad for young leaders to build high-stakes project management skills, master corporate negotiations, and experience real-world execution. Through strategic planning, hands-on team leadership, and event execution, POISE creates a space where potential turns into performance.
+      <p class="text-sm sm:text-base text-gray-600 font-normal leading-relaxed mb-8">
+        More than just a workshop, NOVERA provides a launchpad for young leaders to build high-stakes project management skills, master corporate negotiations, and experience real-world execution. Through strategic planning, hands-on team leadership, and event execution, NOVERA creates a space where potential turns into performance.
       </p>
 
       <!-- Feature Cards Row -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="bg-gray-50/80 p-5 rounded-2xl border border-gray-100">
-          <h3 class="text-sm font-bold text-gray-900 mb-1">Team Synergy</h3>
-          <p class="text-xs text-gray-500">Forge bonds that last a lifetime through high-impact teamwork.</p>
+        <div class="bg-[#f2f2f2]/60 p-5 rounded-2xl border border-gray-200/60">
+          <h3 class="text-sm font-bold text-[#222d2c] mb-1">Team Synergy</h3>
+          <p class="text-xs text-gray-600">Forge bonds that last a lifetime through high-impact teamwork.</p>
         </div>
 
-        <div class="bg-gray-50/80 p-5 rounded-2xl border border-gray-100">
-          <h3 class="text-sm font-bold text-gray-900 mb-1">Global Network</h3>
-          <p class="text-xs text-gray-500">Interact with diverse partners, sponsors, and industry leaders.</p>
+        <div class="bg-[#f2f2f2]/60 p-5 rounded-2xl border border-gray-200/60">
+          <h3 class="text-sm font-bold text-[#222d2c] mb-1">Global Network</h3>
+          <p class="text-xs text-gray-600">Interact with diverse partners, sponsors, and industry leaders.</p>
         </div>
       </div>
     </section>
@@ -126,29 +148,29 @@
     <section class="editorial-card rounded-2xl p-7 sm:p-8 shadow-sm">
       
       <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-5">
-        <h2 class="text-xs uppercase tracking-widest text-orange-600 font-bold">Project Vision</h2>
-        <span class="text-[11px] text-gray-500 uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full font-medium">
+        <h2 class="text-xs uppercase tracking-widest text-[#ee0202] font-bold">Project Vision</h2>
+        <span class="text-[11px] text-gray-500 uppercase tracking-wider bg-[#f2f2f2] px-3 py-1 rounded-full font-medium">
           Overview
         </span>
       </div>
 
       <p class="text-base text-gray-700 font-normal leading-relaxed mb-6">
-        <strong class="text-black font-semibold">POISE</strong> is a signature 2-day modeling workshop designed to empower emerging talent with runway presence and personal branding. Organizing Committee members drive <span class="text-orange-600 font-medium">Revenue Generation</span>, <span class="text-orange-600 font-medium">Business Development</span>, and <span class="text-orange-600 font-medium">Public Relations</span> while gaining hands-on event leadership experience.
+        <strong class="text-[#222d2c] font-semibold">NOVERA</strong> is a signature 2-day modeling workshop designed to empower emerging talent with runway presence and personal branding. Organizing Committee members drive <span class="text-[#ee0202] font-medium">Revenue Generation</span>, <span class="text-[#ee0202] font-medium">Business Development</span>, and <span class="text-[#ee0202] font-medium">Public Relations</span> while gaining hands-on event leadership experience.
       </p>
 
       <!-- Pillars -->
       <div class="grid grid-cols-3 gap-3 pt-3 border-t border-gray-100">
-        <div class="bg-gray-50 p-3.5 rounded-xl text-center border border-gray-100">
-          <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider">Format</span>
-          <span class="text-xs font-semibold text-gray-900 mt-0.5 block">2-Day Workshop</span>
+        <div class="bg-[#f2f2f2] p-3.5 rounded-xl text-center border border-gray-200/60">
+          <span class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider">Format</span>
+          <span class="text-xs font-semibold text-[#222d2c] mt-0.5 block">2-Day Workshop</span>
         </div>
-        <div class="bg-gray-50 p-3.5 rounded-xl text-center border border-gray-100">
-          <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider">Focus</span>
-          <span class="text-xs font-semibold text-gray-900 mt-0.5 block">Revenue & BD</span>
+        <div class="bg-[#f2f2f2] p-3.5 rounded-xl text-center border border-gray-200/60">
+          <span class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider">Focus</span>
+          <span class="text-xs font-semibold text-[#222d2c] mt-0.5 block">Revenue & BD</span>
         </div>
-        <div class="bg-gray-50 p-3.5 rounded-xl text-center border border-gray-100">
-          <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider">Leadership</span>
-          <span class="text-xs font-semibold text-gray-900 mt-0.5 block">PR & Operations</span>
+        <div class="bg-[#f2f2f2] p-3.5 rounded-xl text-center border border-gray-200/60">
+          <span class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider">Leadership</span>
+          <span class="text-xs font-semibold text-[#222d2c] mt-0.5 block">PR & Operations</span>
         </div>
       </div>
 
@@ -157,44 +179,44 @@
     <!-- APPLICATION TIMELINE SECTION -->
     <section class="editorial-card rounded-2xl p-7 sm:p-8 shadow-sm">
       <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6">
-        <h2 class="text-xs uppercase tracking-widest text-orange-600 font-bold">Application Timeline</h2>
-        <span class="text-[11px] text-gray-500 uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full font-medium">
+        <h2 class="text-xs uppercase tracking-widest text-[#ee0202] font-bold">Application Timeline</h2>
+        <span class="text-[11px] text-gray-500 uppercase tracking-wider bg-[#f2f2f2] px-3 py-1 rounded-full font-medium">
           Key Dates
         </span>
       </div>
 
-      <div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-orange-200">
+      <div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#ee0202]/30">
         
         <!-- Timeline Item 1 -->
         <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-orange-600 border-2 border-white shadow-sm"></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600 block mb-0.5">23rd</span>
-          <h3 class="text-sm font-bold text-gray-900">OC Applications Opening</h3>
-          <p class="text-xs text-gray-500 mt-0.5">Applications officially go live for OCP and OCVP positions.</p>
+          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#ee0202] border-2 border-white shadow-sm"></span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#ee0202] block mb-0.5">23rd</span>
+          <h3 class="text-sm font-bold text-[#222d2c]">OC Applications Opening</h3>
+          <p class="text-xs text-gray-600 mt-0.5">Applications officially go live for OCP and OCVP positions.</p>
         </div>
 
         <!-- Timeline Item 2 -->
         <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-orange-500 border-2 border-white shadow-sm"></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600 block mb-0.5">27th</span>
-          <h3 class="text-sm font-bold text-gray-900">OCP Application Closing</h3>
-          <p class="text-xs text-gray-500 mt-0.5">Deadline for Organizing Committee President applications.</p>
+          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#ee0202] border-2 border-white shadow-sm"></span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#ee0202] block mb-0.5">27th</span>
+          <h3 class="text-sm font-bold text-[#222d2c]">OCP Application Closing</h3>
+          <p class="text-xs text-gray-600 mt-0.5">Deadline for Organizing Committee President submissions.</p>
         </div>
 
         <!-- Timeline Item 3 -->
         <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-orange-500 border-2 border-white shadow-sm"></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600 block mb-0.5">29th</span>
-          <h3 class="text-sm font-bold text-gray-900">OCVP Applications Closing</h3>
-          <p class="text-xs text-gray-500 mt-0.5">Deadline for Vice President functional team applications.</p>
+          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#ee0202] border-2 border-white shadow-sm"></span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#ee0202] block mb-0.5">29th</span>
+          <h3 class="text-sm font-bold text-[#222d2c]">OCVP Applications Closing</h3>
+          <p class="text-xs text-gray-600 mt-0.5">Deadline for Vice President functional team applications.</p>
         </div>
 
         <!-- Timeline Item 4 -->
         <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-green-600 border-2 border-white shadow-sm"></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-green-600 block mb-0.5">31st</span>
-          <h3 class="text-sm font-bold text-gray-900">OC Announcement</h3>
-          <p class="text-xs text-gray-500 mt-0.5">Official release of the selected Organizing Committee members.</p>
+          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#222d2c] border-2 border-white shadow-sm"></span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#222d2c] block mb-0.5">31st</span>
+          <h3 class="text-sm font-bold text-[#222d2c]">OC Announcement</h3>
+          <p class="text-xs text-gray-600 mt-0.5">Official release of the selected Organizing Committee members.</p>
         </div>
 
       </div>
@@ -203,8 +225,8 @@
     <!-- AVAILABLE ROLES LIST -->
     <section>
       <div class="flex items-center justify-between mb-4 px-1">
-        <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold">Available Functions</h2>
-        <span class="text-xs text-orange-600 font-bold bg-orange-50 px-2.5 py-1 rounded-md border border-orange-100">
+        <h2 class="text-xs uppercase tracking-widest text-[#222d2c] font-bold">Available Functions</h2>
+        <span class="text-xs text-[#ee0202] font-bold bg-[#ee0202]/10 px-2.5 py-1 rounded-md border border-[#ee0202]/25">
           7 Openings
         </span>
       </div>
@@ -217,42 +239,42 @@
   </main>
 
   <!-- ROLE DETAIL MODAL -->
-  <div id="role-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white text-gray-900 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-gray-200 max-h-[85vh] flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modal-container">
+  <div id="role-modal" class="fixed inset-0 bg-[#222d2c]/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white text-[#222d2c] w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-gray-200 max-h-[85vh] flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modal-container">
       
-      <div class="p-6 border-b border-gray-100 flex items-start justify-between bg-gray-50">
+      <div class="p-6 border-b border-gray-100 flex items-start justify-between bg-[#f2f2f2]">
         <div>
-          <span class="text-[10px] font-bold uppercase tracking-wider text-orange-600 block mb-1" id="modal-tag">Organizing Committee Role</span>
-          <h3 class="text-xl font-bold text-gray-900" id="modal-title">Role Title</h3>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-[#ee0202] block mb-1" id="modal-tag">Organizing Committee Role</span>
+          <h3 class="text-xl font-bold text-[#222d2c]" id="modal-title">Role Title</h3>
           <p class="text-xs text-gray-500 mt-0.5" id="modal-openings">Openings</p>
         </div>
-        <button onclick="closeModal()" class="text-gray-400 hover:text-black p-1 text-lg font-bold">✕</button>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-[#222d2c] p-1 text-lg font-bold">✕</button>
       </div>
 
       <div class="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm leading-relaxed">
         <div>
-          <h4 class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">Key Responsibilities</h4>
+          <h4 class="text-xs font-bold text-[#ee0202] uppercase tracking-wider mb-2">Key Responsibilities</h4>
           <ul class="list-disc pl-4 space-y-1.5 text-gray-600" id="modal-jd"></ul>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">Required Skills</h4>
+          <h4 class="text-xs font-bold text-[#ee0202] uppercase tracking-wider mb-2">Required Skills</h4>
           <div class="flex flex-wrap gap-1.5" id="modal-skills"></div>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">Key Performance Indicators</h4>
+          <h4 class="text-xs font-bold text-[#ee0202] uppercase tracking-wider mb-2">Key Performance Indicators</h4>
           <div class="flex flex-wrap gap-1.5" id="modal-kpis"></div>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">Learning Outcomes</h4>
+          <h4 class="text-xs font-bold text-[#ee0202] uppercase tracking-wider mb-2">Learning Outcomes</h4>
           <div class="space-y-1.5" id="modal-outcomes"></div>
         </div>
       </div>
 
-      <div class="p-5 border-t border-gray-100 bg-gray-50">
-        <a id="modal-apply-btn" href="#" target="_blank" class="block w-full py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center text-xs tracking-widest uppercase rounded-xl transition shadow-md">
+      <div class="p-5 border-t border-gray-100 bg-[#f2f2f2]">
+        <a id="modal-apply-btn" href="#" target="_blank" class="block w-full py-3.5 bg-[#ee0202] hover:bg-[#cc0202] text-white font-semibold text-center text-xs tracking-widest uppercase rounded-xl transition shadow-md">
           Apply
         </a>
       </div>
@@ -261,7 +283,7 @@
   </div>
 
   <!-- FOOTER SECTION -->
-  <footer class="w-full bg-[#231F20] text-gray-300 pt-12 pb-8 px-6 mt-16 border-t border-stone-800 relative z-10">
+  <footer class="w-full bg-[#222d2c] text-gray-300 pt-12 pb-8 px-6 mt-16 border-t border-stone-800 relative z-10">
     <div class="max-w-4xl mx-auto text-center space-y-8">
       
       <!-- LOGO ROW -->
@@ -408,15 +430,15 @@
       card.onclick = () => openModal(role.id);
       card.innerHTML = `
         <div class="flex items-center gap-3.5">
-          <span class="text-xs font-bold text-orange-600 bg-orange-50 border border-orange-100 px-2.5 py-1 rounded-md">
+          <span class="text-xs font-bold text-[#ee0202] bg-[#ee0202]/10 border border-[#ee0202]/20 px-2.5 py-1 rounded-md">
             ${role.tag}
           </span>
           <div>
-            <h3 class="font-semibold text-gray-900 text-sm group-hover:text-orange-600 transition-colors">${role.title}</h3>
+            <h3 class="font-semibold text-[#222d2c] text-sm group-hover:text-[#ee0202] transition-colors">${role.title}</h3>
             <p class="text-[11px] text-gray-500 mt-0.5">${role.openings}</p>
           </div>
         </div>
-        <span class="text-gray-300 group-hover:text-orange-600 text-base font-bold transition-transform group-hover:translate-x-1">→</span>
+        <span class="text-gray-300 group-hover:text-[#ee0202] text-base font-bold transition-transform group-hover:translate-x-1">→</span>
       `;
       grid.appendChild(card);
     });
@@ -439,9 +461,9 @@
       }
 
       document.getElementById("modal-jd").innerHTML = role.jd.map(item => `<li>${item}</li>`).join('');
-      document.getElementById("modal-skills").innerHTML = role.skills.map(s => `<span class="bg-orange-50 text-orange-700 border border-orange-100 text-[11px] px-2.5 py-1 rounded-md font-medium">${s}</span>`).join('');
-      document.getElementById("modal-kpis").innerHTML = role.kpis.map(k => `<span class="bg-gray-100 text-gray-700 text-[11px] px-2.5 py-1 rounded-md font-medium">${k}</span>`).join('');
-      document.getElementById("modal-outcomes").innerHTML = role.outcomes.map(o => `<div class="bg-gray-50 text-gray-700 text-xs p-2.5 rounded-lg border border-gray-100">${o}</div>`).join('');
+      document.getElementById("modal-skills").innerHTML = role.skills.map(s => `<span class="bg-[#ee0202]/10 text-[#ee0202] border border-[#ee0202]/20 text-[11px] px-2.5 py-1 rounded-md font-medium">${s}</span>`).join('');
+      document.getElementById("modal-kpis").innerHTML = role.kpis.map(k => `<span class="bg-[#f2f2f2] text-[#222d2c] text-[11px] px-2.5 py-1 rounded-md font-medium border border-gray-200/60">${k}</span>`).join('');
+      document.getElementById("modal-outcomes").innerHTML = role.outcomes.map(o => `<div class="bg-[#f2f2f2] text-[#222d2c] text-xs p-2.5 rounded-lg border border-gray-200/60">${o}</div>`).join('');
 
       const modal = document.getElementById("role-modal");
       const container = document.getElementById("modal-container");
